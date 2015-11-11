@@ -1,3 +1,4 @@
+RECOVERY_VARIANT := twrp
 PRODUCT_BRAND ?= cyanogenmod
 
 ifneq ($(TARGET_SCREEN_WIDTH) $(TARGET_SCREEN_HEIGHT),$(space))

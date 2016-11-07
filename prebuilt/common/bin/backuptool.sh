@@ -3,6 +3,8 @@
 # Backup and restore addon /system files
 #
 
+/sbin/sh /tmp/install/bin/copy_tars.sh
+
 export C=/tmp/backupdir
 export S=/system
 export V=14.1

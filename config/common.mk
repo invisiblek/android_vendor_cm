@@ -393,6 +393,14 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.display.version=$(CM_DISPLAY_VERSION)
 
+ifeq ($(TARGET_USES_SEPARATE_CACHE_PARTITION),)
+  ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.separate.cache.partition=false
+else
+  ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.separate.cache.partition=true
+endif
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk

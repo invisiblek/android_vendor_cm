@@ -105,6 +105,10 @@ PRODUCT_PACKAGES += \
     Profiles \
     WeatherManagerService
 
+# OMS
+PRODUCT_PACKAGES += \
+    masquerade
+
 # Optional CM packages
 PRODUCT_PACKAGES += \
     libemoji \

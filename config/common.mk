@@ -27,8 +27,10 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
+ifeq ($(RECOVERY_VARIANT),)
 # Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif
 endif
 
 # Copy over the changelog to the device
